@@ -1,9 +1,9 @@
 import socket
 import threading
 import json
-from user import User
-from message import Message
-from channel import Channel
+from .user import User
+from .message import Message
+from .channel import Channel
 import websocket
 import time
 

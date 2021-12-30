@@ -1,7 +1,7 @@
 import requests
 import json
-import message as Message
-from user import User
+from .message import *
+from .user import User
 
 class Channel():
     def __init__(self, id, token):
@@ -34,5 +34,5 @@ class Channel():
             user = User(author["username"], author["id"], author["discriminator"], author["avatar"], author["public_flags"], True)
         else:
             user = User(author["username"], author["id"], author["discriminator"], author["avatar"], author["public_flags"], False)
-        Messaggio = Message.Message(toJson["id"], toJson["content"], user, toJson["type"], toJson["embeds"], toJson["pinned"], toJson["mentions"], toJson["mention_roles"], toJson["attachments"], toJson["mention_everyone"], toJson["tts"], toJson["timestamp"], toJson["edited_timestamp"], toJson["flags"], toJson["components"], channel, self._token)
+        Messaggio = Message(toJson["id"], toJson["content"], user, toJson["type"], toJson["embeds"], toJson["pinned"], toJson["mentions"], toJson["mention_roles"], toJson["attachments"], toJson["mention_everyone"], toJson["tts"], toJson["timestamp"], toJson["edited_timestamp"], toJson["flags"], toJson["components"], channel, self._token)
         return Messaggio

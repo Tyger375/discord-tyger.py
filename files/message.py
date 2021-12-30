@@ -1,8 +1,8 @@
 import requests
 import json as JSON
-from embed import Embed
-from channel import Channel
-from user import User
+from .embed import Embed
+from .channel import Channel
+from .user import User
 
 class Message():
     def _transform_embeds(self, embeds):
