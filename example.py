@@ -1,7 +1,7 @@
 import asyncio
 import files.poggers as discord
 
-client = discord.Client("ODE0OTM0NTU1NDcwOTg3Mjg1.YDlE8g.mp56qXJ6Pdb9jQGQ6qLWL_fl7j4")
+client = discord.Client("token")
 
 async def on_message(message):
     if message.author.bot == False:
